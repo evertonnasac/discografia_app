@@ -1,30 +1,8 @@
-# React + TypeScript + Vite
+Caros colegas.
+Lamento não ter consguido concluir a tempo a integração com a API e a estilização adequada para o front.
+A princípio, eu não iria realizar esse desafio, por não ter tido contato com PHP e Laravel, mas decidi me desafiar, 
+pois tenho noções de projetos de backend, e não saber a sintaxe e as regras de um framwork não é um impedimento, então, corri, pesquisei,
+quebrei a cabeça e consegui fazer o básico, do que foi pedido, mas infelizmente não sobrou tempo para o front.  Continuarei trabalhando nessa aplicação mesmo depois
+de ser avaliado e concluirei a estilização e a integração e aconclusão do Readme.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Nesse  projeto, está sendo utilizado o Vite, React-TS, Axios e Styled-Component. 
