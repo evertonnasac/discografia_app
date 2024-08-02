@@ -11,14 +11,24 @@ const DivControl = styled.div`
 
 `
 
-const Name = styled.text`
+const Name = styled.p`
     font-size: 16px;
 `
 
-export const BoxMusic = () => {
+const Duration = styled.p`
+    font-size: 14px;
+    color: gray;
+`
+type Props =  {
+    name: string,
+    duration: string,
+    disco_id: number
+}
+export const CardFaixa = ({name, duration} : Props) => {
     return (
         <DivControl>
-            <Name>Nome da Música</Name>
+            <Name>{name}</Name>
+            <Duration>{duration}</Duration>
             <ButtonSaveOrRemove action="remove"/>
         </DivControl>
     )

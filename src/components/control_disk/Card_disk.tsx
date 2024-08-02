@@ -20,17 +20,22 @@ const Image = styled.img`
 
 `
 
-const Title = styled.text`
+const Title = styled.p`
     font-size: medium;
     color: blue;
 `
 
-export const CardDisk = () => {
+type Props = {
+    name : string,
+    onClick? : () => void 
+}
+
+export const CardDisk = ({name, onClick} : Props) => {
     return(
-        <Container>
+        <Container onClick={onClick? onClick : () => {}}>
             <Image src={img_disk}/>
             <Title>
-                Nome do disco
+                {name}
             </Title>
         </Container>
     )
