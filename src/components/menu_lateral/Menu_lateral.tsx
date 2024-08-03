@@ -30,7 +30,7 @@ export const MenuLateral = () => {
             </ItensMenu>
 
             <ItensMenu>  
-                <StyledLink to={"musicas"}>Minhas Músicas</StyledLink>
+                <StyledLink to={"faixas"}>Minhas Músicas</StyledLink>
             </ItensMenu>
             
         </BoxItens>

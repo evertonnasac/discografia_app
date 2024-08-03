@@ -1,26 +1,20 @@
-import { Style } from "./Button_style"
-import styled from "styled-components"
+import { Style, Image } from "./Button_style"
 import delete_btn from "../../../../public/delete_btn.png"
 import add_btn from "../../../../public/add_btn.png"
 
 
-const Image = styled.img`
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-`
-
 type Props = {
-    action : "add" | "remove"
+    action : "add" | "remove",
+    onClick : () => void
 }
 
-export const ButtonSaveOrRemove = ({action} : Props) =>{
+export const ButtonSaveOrRemove = ({action, onClick} : Props) =>{
 
     const image = action == "add" ? add_btn : delete_btn
 
     return(
         <Style>
-            <Image src = {image} />
+            <Image src = {image} onClick={onClick}/>
         </Style>
     )
 

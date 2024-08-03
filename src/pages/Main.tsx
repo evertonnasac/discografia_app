@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ListDisk} from "./list_disk/List_disks"
+import { ListDisk} from "./list_disks/List_disks"
 
 
 const Container = styled.main`

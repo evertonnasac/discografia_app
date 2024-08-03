@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import image from "../../../public/search.png"
+import { useState } from "react";
+
 
 const DivSearch = styled.div`
     border:solid 1px;
@@ -24,12 +26,21 @@ const Image = styled.img`
 
 `
 
+type Props = {
+    onClick : (value : string) => void
+    
+}
 
-export const Search = () =>{
+
+export const Search = ({onClick} : Props) =>{
+
+    const [value, setValue] = useState("")
+
     return(
         <DivSearch>
-            <Input/>
-            <Image src={image}/>
+            <Input value={value} onChange={(e) => setValue(e.target.value)}
+            />
+            <Image src={image} onClick={() => onClick(value)}/>
         </DivSearch>
     )
 }

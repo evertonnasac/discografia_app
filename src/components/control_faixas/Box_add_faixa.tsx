@@ -6,7 +6,7 @@ export const BoxAddMusic = () => {
     return (
         <Container>
             <Input placeholder="Adicionar música ao disco" />
-            <ButtonSaveOrRemove action="add" />
+            <ButtonSaveOrRemove action="add" onClick={() => {}} />
         </Container>
     )
 }

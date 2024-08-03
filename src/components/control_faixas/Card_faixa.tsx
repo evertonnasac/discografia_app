@@ -29,7 +29,7 @@ export const CardFaixa = ({name, duration} : Props) => {
         <DivControl>
             <Name>{name}</Name>
             <Duration>{duration}</Duration>
-            <ButtonSaveOrRemove action="remove"/>
+            <ButtonSaveOrRemove action="remove" onClick={() => {}}/>
         </DivControl>
     )
 }

@@ -6,6 +6,7 @@ import { Disk } from "../../types/disk";
 import { useEffect, useState } from "react";
 import { navigate } from "../../router/navigate";
 import { getUrls } from "../../router/urls";
+import { Search } from "../../components/search/Search";
 
 const MainContainer = styled.div`
     width: 90%;
@@ -49,12 +50,15 @@ export const ListDisk =  () => {
 
     },[])
 
-  
+    const getNameDisk = (name : string) => {
+        nav(getUrls().pageDiskName(name))
+    }
 
     return (
         <MainContainer>
             <Header>
                 <BoxAddDisk/>
+                <Search onClick={getNameDisk} />
             </Header>
             <DisksBox >
                 {disks?.length ? (

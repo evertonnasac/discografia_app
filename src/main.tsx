@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
-import { ListDisk } from './pages/list_disk/List_disks.tsx';
+import { ListDisk } from './pages/list_disks/List_disks.tsx';
 import { AreaDisk } from './pages/area_disk/AreaDisk.tsx';
-
+import { ListFaixas } from './pages/list_faixas/list_faixas.tsx';
+import { SearchDisk } from './pages/list_disks/Search_disk.tsx';
 import "./index.css"
 
 const router = createBrowserRouter([
@@ -20,11 +21,15 @@ const router = createBrowserRouter([
       },
       {
         path: "faixas",
-        element: <ListDisk />,
+        element: <ListFaixas />,
       },
       {
         path: "disco/:id/:name",
         element: <AreaDisk />,
+      },
+      {
+        path: "disco/:name",
+        element: <SearchDisk />,
       },
     ],
   },

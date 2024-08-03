@@ -12,7 +12,7 @@ export const getApiDisk = () => {
         getAllDisks : async () => baseAPIi.get("/discos") ,
         getDiskToId :   async (param: number) => baseAPIi.get(`/discos/${param}`),
         getDisksName :  async (param : string) => baseAPIi.get(`/discos/search/${param}`),
-        postDisk :  async () => baseAPIi.post(`/discos`),
+        postDisk :  async (name : string) => baseAPIi.post(`/disco`, {name}),
         deleteDisk :  async (param : number) => baseAPIi.delete(`/discos/${param}`),
     }
         
