@@ -36,11 +36,15 @@ export const Search = ({onClick} : Props) =>{
 
     const [value, setValue] = useState("")
 
+    const click = (value : string) => {
+        onClick(value)
+        setValue("")
+    }
+
     return(
         <DivSearch>
-            <Input value={value} onChange={(e) => setValue(e.target.value)}
-            />
-            <Image src={image} onClick={() => onClick(value)}/>
+            <Input value={value} onChange={(e) => setValue(e.target.value)}/>
+            <Image src={image} onClick={() => click(value)}/>
         </DivSearch>
     )
 }

@@ -25,8 +25,8 @@ export const getApiFaixas = () => {
 
         getAllFaixas :  async () => baseAPIi.get("/faixas"),
         getFaixastoDisk :  async (param: number) => baseAPIi.get(`/faixas/${param}`),
-        getFaixasName :  async () => baseAPIi.get(`/faixas/search`),
-        deleteFaixas :  async (param : number) => baseAPIi.get(`/faixas/${param}`),   
+        getFaixasName :  async (name: string) => baseAPIi.get(`/faixas/search/${name}`),
+        deleteFaixas :  async (param : number) => baseAPIi.delete(`/faixas/${param}`),   
     }
 }
 
