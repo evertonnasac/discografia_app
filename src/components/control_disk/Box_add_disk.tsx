@@ -1,10 +1,18 @@
 import styled from "styled-components"
-import {Container} from "../save/Save_control"
 import {ButtonSaveOrRemove} from "../buttons/button_save_remove/Button"
 import { getApiDisk } from "../../api/endpoints"
 import { useState } from "react"
 import { navigate } from "../../router/navigate"
 
+
+
+export const Container = styled.div`
+    width: 70%;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+   
+`
 
 export const Input = styled.input`
     background-color:transparent;
@@ -12,8 +20,13 @@ export const Input = styled.input`
     font-size:18px;
     border:none;
     height:32px;
-    width:80%;
+    width:250px;
     border: 1px solid gray;
+
+`
+
+const WreperInput = styled.div`
+    width:275px;
 
 `
 export const BoxAddDisk = () => {
@@ -30,9 +43,12 @@ export const BoxAddDisk = () => {
 
     return (
         <Container>
-            <Input placeholder="Adicionar um novo disco"
-                value={name} 
-                onChange={(e)=>setName(e.target.value)} />
+            <WreperInput>
+                <label >Adicionar novo disco</label>
+                <Input placeholder="Digite o nome do disco" 
+                    value={name} 
+                    onChange={(e)=>setName(e.target.value)} />
+                </WreperInput>
             <ButtonSaveOrRemove action="add" onClick={save} />
         </Container>
     )

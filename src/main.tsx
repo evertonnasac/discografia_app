@@ -5,7 +5,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import { ListDisk } from './pages/list_disks/List_disks.tsx';
 import { AreaDisk } from './pages/area_disk/AreaDisk.tsx';
-import { ListFaixas } from './pages/list_faixas/list_faixas.tsx';
+import { ListFaixas } from './pages/list_faixas/List_faixas.tsx';
 import { SearchDisk } from './pages/list_disks/Search_disk.tsx';
 import "./index.css"
 

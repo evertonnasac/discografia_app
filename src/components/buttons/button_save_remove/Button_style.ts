@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Style = styled.div`
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     display: flex;
     
 `

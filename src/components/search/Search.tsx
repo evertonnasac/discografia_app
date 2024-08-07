@@ -6,9 +6,10 @@ import { useState } from "react";
 const DivSearch = styled.div`
     border:solid 1px;
     border-radius:15px;
-    width:300px;
+    width:270px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
 
 `
 const Input =  styled.input`
@@ -17,22 +18,27 @@ const Input =  styled.input`
     font-size:18px;
     border:none;
     height:32px;
-    width:70%;
+    width:85%;
+    outline: none;
+
 `
 
 const Image = styled.img`
     width: 25px;
     height:25px;
+    cursor: pointer;
 
 `
 
 type Props = {
-    onClick : (value : string) => void
+    onClick : (value : string) => void,
+    placeholder: string
+
     
 }
 
 
-export const Search = ({onClick} : Props) =>{
+export const Search = ({onClick, placeholder} : Props) =>{
 
     const [value, setValue] = useState("")
 
@@ -43,7 +49,7 @@ export const Search = ({onClick} : Props) =>{
 
     return(
         <DivSearch>
-            <Input value={value} onChange={(e) => setValue(e.target.value)}/>
+            <Input value={value} onChange={(e) => setValue(e.target.value)} placeholder={placeholder} />
             <Image src={image} onClick={() => click(value)}/>
         </DivSearch>
     )

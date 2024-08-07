@@ -7,13 +7,12 @@ const BoxItens = styled.ul`
 `
 const ItensMenu = styled.li`
     font-size: 25px;
-    list-style: none;
     cursor: pointer;
 
 `
 const StyledLink = styled(Link)`
     text-decoration: none;
-    color: black;
+    color: gray;
 
     &:hover {
        color: lightgray; 
@@ -26,11 +25,11 @@ export const MenuLateral = () => {
     return(
         <BoxItens>
             <ItensMenu>  
-                <StyledLink to={"discos"}>Meus Discos</StyledLink>
+                <StyledLink to={"discos"}>Discos</StyledLink>
             </ItensMenu>
 
             <ItensMenu>  
-                <StyledLink to={"faixas"}>Minhas Músicas</StyledLink>
+                <StyledLink to={"faixas"}>Músicas</StyledLink>
             </ItensMenu>
             
         </BoxItens>

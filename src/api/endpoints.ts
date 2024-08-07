@@ -21,12 +21,22 @@ export const getApiDisk = () => {
 
 export const getApiFaixas = () => {
 
+
+
     return {
 
         getAllFaixas :  async () => baseAPIi.get("/faixas"),
         getFaixastoDisk :  async (param: number) => baseAPIi.get(`/faixas/${param}`),
         getFaixasName :  async (name: string) => baseAPIi.get(`/faixas/search/${name}`),
-        deleteFaixas :  async (param : number) => baseAPIi.delete(`/faixas/${param}`),   
+        deleteFaixas :  async (param : number) => baseAPIi.delete(`/faixas/${param}`),  
+        postFaixa : async (faixa : Faixa) =>  baseAPIi.post(`/faixas`, {...faixa}) 
     }
+       
+    
 }
 
+export interface Faixa {
+    name: string,
+    duration: string,
+    disco_id: number
+}

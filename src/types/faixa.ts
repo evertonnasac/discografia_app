@@ -1,6 +1,6 @@
 export interface Faixa{
     id: number,
     name: string,
-    duration: number,
+    duration: string,
     disco_id: number
 }
